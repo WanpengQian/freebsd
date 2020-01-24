@@ -586,6 +586,7 @@ pci_emul_alloc_pbar(struct pci_devinst *pdi, int idx, uint64_t hostbase,
 		    enum pcibar_type type, uint64_t size)
 {
 	int error;
+	uint16_t cmd, enbit;
 	uint64_t *baseptr, limit, addr, mask, lobits, bar;
 	uint16_t cmd, enbit;
 
